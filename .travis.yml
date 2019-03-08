@@ -1,0 +1,10 @@
+sudo: required
+services:
+  - docker
+
+before_install:
+  - docker build -t alucard979/merlin -f Dockerfile.dev .
+
+script:
+  - docker run alucard979/merlin npm run test -- --coverage
+
