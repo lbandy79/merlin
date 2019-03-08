@@ -2,6 +2,9 @@ sudo: required
 services:
   - docker
 
+node_js:
+  - "11.10.1"
+
 before_install:
   - docker build -t alucard979/merlin -f Dockerfile.dev .
 
